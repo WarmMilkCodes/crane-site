@@ -1,37 +1,21 @@
-import Image from "next/image";
 import Link from "next/link";
 import { HeroTiles } from "@/components/HeroTiles";
+import HeroHeader from "@/components/HeroHeader";
 
 export default function Page() {
   return (
     <div className="space-y-6">
-      {/* Full-width Hero Image */}
-      <div className="relative w-full h-56 md:h-72 lg:h-80 overflow-hidden rounded-[var(--radius-xl)] shadow-sm">
-        <Image
-          src="/header.jpg"
-          alt="Downtown Crane, Missouri"
-          fill
-          priority
-          className="object-cover"
-        />
+      <HeroHeader
+        title="City of Crane, Missouri"
+        subtitle="Modern demo — mobile-friendly, accessible, and easy to keep updated."
+        imageSrc="/header.jpg"
+      />
 
-      </div>
-
-      {/* Main Card Content */}
       <section className="card p-6 md:p-10">
-        <h1
-          className="text-3xl md:text-4xl font-semibold tracking-tight"
-          style={{ fontFamily: "var(--font-serif)" as any }}
-        >
-          City of Crane, Missouri
-        </h1>
-        <p className="text-[var(--color-muted)] mt-2">
-          Modern demo — mobile-friendly, accessible, and easy to keep updated.
-        </p>
-
+        {/* keep the Notice + tiles + sections as-is */}
         <div
           role="status"
-          className="mt-6 rounded-lg border border-[var(--color-accent-warm)]/50 bg-[var(--color-accent-warm)]/10 text-[var(--color-accent-warm)] px-4 py-3"
+          className="rounded-lg border border-[var(--color-accent-warm)]/50 bg-[var(--color-accent-warm)]/10 text-[var(--color-accent-warm)] px-4 py-3"
         >
           <strong className="mr-2">Notice:</strong>
           Sidewalk project continues along Rose Ave.
