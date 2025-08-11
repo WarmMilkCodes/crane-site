@@ -1,8 +1,13 @@
 export function AlertBar({ text }: { text?: string }) {
   if (!text) return null;
+
   return (
-    <div role="status" className="mb-4 rounded-lg border border-yellow-200 bg-yellow-50 text-yellow-900 px-4 py-3">
-      <strong className="mr-2">City Notice:</strong>{text}
+    <div
+      role="status"
+      className="rounded-lg border border-[var(--color-accent-warm)]/50 bg-[var(--color-accent-warm)]/10 text-[var(--color-accent-warm)] px-4 py-3"
+    >
+      <strong className="mr-2">Notice:</strong>
+      {text}
     </div>
   );
 }

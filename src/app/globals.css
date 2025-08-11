@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-/* Civic design tokens */
+/* ===== Civic + Earthy Design Tokens ===== */
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial;
   --font-serif: "Source Serif Pro", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-  --color-bg: #f7f7fb;           /* page background */
-  --color-surface: #ffffff;      /* cards/nav/footer */
-  --color-outline: #e5e7eb;      /* borders (gray-200) */
-  --color-text: #0f172a;         /* slate-900 */
-  --color-muted: #475569;        /* slate-600 */
-  --color-accent: #1e3a8a;       /* primary: blue-900 */
-  --color-accent-2: #2563eb;     /* blue-600 for hovers/CTAs */
-  --color-success: #15803d;      /* green-700 */
-  --color-danger: #b91c1c;       /* red-700 */
+  /* Warm, grounded base */
+  --color-bg: #f3f1ed;           /* light warm gray-beige */
+  --color-surface: #ffffff;      /* cards / nav / footer */
+  --color-surface-alt: #faf8f5;  /* soft off-white section alt */
+  --color-outline: #ddd6ce;      /* beige-gray borders */
+  --color-text: #1f2937;         /* slate-800 */
+  --color-muted: #4b5563;        /* slate-600 */
+
+  /* Earthy civic accents */
+  --color-accent: #355e3b;       /* deep evergreen */
+  --color-accent-2: #4f7942;     /* softened green */
+  --color-accent-warm: #b68c5a;  /* warm tan */
+
+  --color-success: #3b7d4f;
+  --color-danger: #a33f3f;
 
   --radius-sm: .5rem;
   --radius-md: .75rem;
   --radius-xl: 1rem;
 }
 
-/* Base */
+/* ===== Base ===== */
 :root { color-scheme: light; }
 html, body { height: 100%; }
 body {
@@ -29,22 +35,31 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Utilities */
+/* ===== Reusable Utilities ===== */
 @utility card {
   @apply rounded-[var(--radius-xl)] border border-[var(--color-outline)] bg-[var(--color-surface)] shadow-sm;
+}
+@utility section-alt {
+  @apply rounded-[var(--radius-xl)] border border-[var(--color-outline)] bg-[var(--color-surface-alt)] shadow-sm;
 }
 @utility btn {
   @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium border border-[var(--color-outline)] bg-white hover:bg-gray-50 transition;
 }
 @utility btn-primary {
-  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-white bg-[var(--color-accent-2)] hover:bg-blue-700 shadow-sm;
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-white bg-[var(--color-accent-2)] hover:bg-[var(--color-accent)] shadow-sm;
+}
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-[var(--color-accent)] bg-[var(--color-surface-alt)] hover:bg-[var(--color-outline)]/20;
 }
 @utility link-tile {
-  @apply card p-5 md:p-6 hover:shadow-md transition flex items-center justify-between;
+  @apply card p-5 md:p-6 hover:shadow-md hover:shadow-[var(--color-accent-warm)]/20 transition flex items-center justify-between;
 }
 
-/* Accessibility helpers */
+/* ===== Accessibility Helpers ===== */
 .skip-link {
   position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
-.skip-link:focus { left: 1rem; top: 1rem; width: auto; height: auto; padding: .5rem .75rem; @apply rounded bg-white border border-[var(--color-outline)]; }
+.skip-link:focus {
+  left: 1rem; top: 1rem; width: auto; height: auto; padding: .5rem .75rem;
+  @apply rounded bg-white border border-[var(--color-outline)];
+}

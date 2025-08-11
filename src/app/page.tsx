@@ -1,33 +1,104 @@
-import { AlertBar } from "@/components/AlertBar";
-import { HeroTiles } from "@/components/HeroTiles";
 import Link from "next/link";
+import { HeroTiles } from "@/components/HeroTiles";
 
 export default function Page() {
   return (
     <div className="space-y-6">
-      <section className="card p-6 md:p-8">
-        <h1 className="text-2xl md:text-3xl font-semibold">City of Crane, Missouri</h1>
-        <p className="text-white/70 mt-2">Modern demo — fast, mobile-first, ADA-friendly.</p>
+      {/* Hero / Intro */}
+      <section className="card p-6 md:p-10">
+        <h1
+          className="text-3xl md:text-4xl font-semibold tracking-tight"
+          style={{ fontFamily: "var(--font-serif)" as any }}
+        >
+          City of Crane, Missouri
+        </h1>
+        <p className="text-[var(--color-muted)] mt-2">
+          Modern demo — mobile-friendly, accessible, and easy to keep updated.
+        </p>
 
+        {/* Notice (inline, no extra component) */}
+        <div
+          role="status"
+          className="mt-6 rounded-lg border border-[var(--color-accent-warm)]/50 bg-[var(--color-accent-warm)]/10 text-[var(--color-accent-warm)] px-4 py-3"
+        >
+          <strong className="mr-2">Notice:</strong>
+          Water service interruption planned on Maple St, Wed 10–2pm.
+        </div>
+
+        {/* Primary actions */}
         <div className="mt-6">
-          <AlertBar text="Water service interruption planned on Maple St, Wed 10–2pm." />
           <HeroTiles />
         </div>
 
-        <div className="mt-8 grid md:grid-cols-2 gap-6">
-          <div className="card p-5">
+        {/* Two-up: News + Meetings */}
+        <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <div className="section-alt p-5">
             <h2 className="text-lg font-semibold">News</h2>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li><Link className="hover:underline" href="/news/boil-order-lifted">Boil Order Lifted</Link> • Jul 18</li>
-              <li><Link className="hover:underline" href="/news/city-pool-extended-hours">City Pool Extended Hours</Link> • Jul 12</li>
+            <ul className="mt-3 space-y-2 text-sm text-[var(--color-muted)]">
+              <li>
+                <Link className="text-[var(--color-accent-2)] hover:underline" href="/news/boil-order-lifted">
+                  Boil Order Lifted
+                </Link>{" "}
+                • Jul 18
+              </li>
+              <li>
+                <Link className="text-[var(--color-accent-2)] hover:underline" href="/news/city-pool-extended-hours">
+                  City Pool Extended Hours
+                </Link>{" "}
+                • Jul 12
+              </li>
             </ul>
+            <div className="mt-4">
+              <Link href="/news" className="btn-secondary">View all news</Link>
+            </div>
           </div>
-          <div className="card p-5">
+
+          <div className="section-alt p-5">
             <h2 className="text-lg font-semibold">Upcoming Meetings</h2>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li><Link className="hover:underline" href="/events/board-of-aldermen-aug">Board of Aldermen</Link> • Mon, Aug 18, 6:30pm</li>
-              <li><Link className="hover:underline" href="/events/park-board-aug">Park Board</Link> • Thu, Aug 21, 5:00pm</li>
+            <ul className="mt-3 space-y-2 text-sm text-[var(--color-muted)]">
+              <li>
+                <Link className="text-[var(--color-accent-2)] hover:underline" href="/events/board-of-aldermen-aug">
+                  Board of Aldermen
+                </Link>{" "}
+                • Mon, Aug 18, 6:30pm
+              </li>
+              <li>
+                <Link className="text-[var(--color-accent-2)] hover:underline" href="/events/park-board-aug">
+                  Park Board
+                </Link>{" "}
+                • Thu, Aug 21, 5:00pm
+              </li>
             </ul>
+            <div className="mt-4">
+              <Link href="/calendar" className="btn-secondary">Open calendar</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Helpful links / quick info */}
+      <section className="section-alt p-6 md:p-10">
+        <h2 className="text-lg font-semibold">Quick Information</h2>
+        <div className="mt-4 grid md:grid-cols-3 gap-4 text-sm text-[var(--color-muted)]">
+          <div className="card p-4">
+            <div className="font-medium text-[var(--color-text)]">City Hall</div>
+            <div>PO Box 17 · Crane, MO 65633</div>
+            <div>(417) 723-5000</div>
+            <div className="text-xs mt-1">Mon–Fri, 8:00 AM – 4:30 PM</div>
+          </div>
+          <div className="card p-4">
+            <div className="font-medium text-[var(--color-text)]">Utilities</div>
+            <div>Start/Stop Service • Billing</div>
+            <div className="mt-2">
+              <Link href="/utilities" className="btn-primary">Pay Utility Bill</Link>
+            </div>
+          </div>
+          <div className="card p-4">
+            <div className="font-medium text-[var(--color-text)]">Contact</div>
+            <div>Questions or concerns?</div>
+            <div className="mt-2">
+              <Link href="/contact" className="btn">Contact City Hall</Link>
+            </div>
           </div>
         </div>
       </section>
