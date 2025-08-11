@@ -13,10 +13,10 @@ export function HeroTiles() {
       {tiles.map(t => (
         <Link key={t.href} href={t.href} className="link-tile">
           <span className="flex items-center gap-3">
-            <t.icon className="opacity-80" size={18} />
+            <t.icon className="text-[var(--color-accent-2)]" size={18} />
             <span className="font-medium">{t.label}</span>
           </span>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true" className="text-[var(--color-muted)]">›</span>
         </Link>
       ))}
     </div>

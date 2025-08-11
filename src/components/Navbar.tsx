@@ -16,15 +16,16 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="border-b border-white/10 bg-[var(--color-surface)]/70 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-surface)]/50">
-      <div className="mx-auto max-w-6xl px-4 md:px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="font-semibold tracking-wide">
-          City of <span className="text-[var(--color-accent)]">Crane</span>
+    <header className="sticky top-0 z-50 bg-[var(--color-surface)]/90 backdrop-blur border-b border-[var(--color-outline)]">
+      <div className="mx-auto max-w-6xl px-4 md:px-6 h-16 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2 font-semibold tracking-wide">
+          <span className="inline-block h-8 w-8 rounded-lg bg-[var(--color-accent)]"></span>
+          <span className="text-[var(--color-accent)]">City of Crane</span>
         </Link>
 
         <nav className="hidden md:flex gap-6 text-sm">
           {links.map(l => (
-            <Link key={l.href} href={l.href} className="text-white/80 hover:text-white">
+            <Link key={l.href} href={l.href} className="text-[var(--color-muted)] hover:text-[var(--color-text)]">
               {l.label}
             </Link>
           ))}
@@ -35,8 +36,8 @@ export function Navbar() {
         </button>
       </div>
 
-      <div className={clsx("md:hidden border-t border-white/10", open ? "block" : "hidden")}>
-        <div className="px-4 py-3 space-y-2">
+      <div className={clsx("md:hidden border-t border-[var(--color-outline)]", open ? "block" : "hidden")}>
+        <div className="px-4 py-3 space-y-2 bg-[var(--color-surface)]">
           {links.map(l => (
             <Link key={l.href} href={l.href} className="block link-tile !p-3" onClick={() => setOpen(false)}>
               {l.label}
