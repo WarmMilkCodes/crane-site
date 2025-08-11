@@ -8,7 +8,7 @@ export default function Page() {
       <HeroHeader
         title="City of Crane, Missouri"
         subtitle="Modern demo — mobile-friendly, accessible, and easy to keep updated."
-        imageSrc="/header.jpg"
+        imageSrc="/headers/2025-summer.jpg"
       />
 
       <section className="card p-6 md:p-10">

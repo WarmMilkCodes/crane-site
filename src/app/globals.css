@@ -63,3 +63,22 @@ body {
   left: 1rem; top: 1rem; width: auto; height: auto; padding: .5rem .75rem;
   @apply rounded bg-white border border-[var(--color-outline)];
 }
+
+/* ===== Print styles (clean content-only) ===== */
+@media print {
+  /* hide chrome */
+  header, nav, footer, .skip-link { display: none !important; }
+  /* page background white, dark text */
+  body { background: #fff !important; color: #111 !important; }
+  /* cards lose borders/shadows; full width */
+  .card, .section-alt { border: 0 !important; box-shadow: none !important; background: #fff !important; }
+  /* links show URLs (optional, comment out if you don't want) */
+  a[href]::after {
+    content: " (" attr(href) ")"; font-weight: normal; font-size: 0.9em; color: #555;
+  }
+  /* avoid breaking headings/tables across pages */
+  h1, h2, h3 { break-after: avoid; }
+  table, pre, blockquote { break-inside: avoid; }
+  /* tighter margins */
+  @page { margin: 0.6in; }
+}
