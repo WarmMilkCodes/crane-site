@@ -56,7 +56,7 @@ export default async function DocumentsPage({
         role="status"
         className="mt-4 rounded-lg border border-[var(--color-gold-600)] bg-[var(--color-gold-600)] text-white px-4 py-3 text-sm leading-relaxed"
       >
-        <strong className="block font-medium mb-1">Notice:</strong>
+        <strong className="mr-2">Notice:</strong>
         The only officially published version of the Crane Code of Ordinances is located in the City Clerk’s Office.
         Please note, the online versions may differ from the official version and should be relied upon for
         general information purposes only.
