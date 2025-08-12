@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
@@ -33,18 +34,21 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-wide">
-          {/* tiny “seal” placeholder */}
-          <span className="inline-block h-8 w-8 rounded-lg bg-[var(--color-accent)] ring-1 ring-black/5" />
+          {/* replace green square with logo image */}
+          <Image
+            src="/logo.png"
+            alt="City of Crane"
+            width={32}
+            height={32}
+            className="rounded-lg object-contain"
+            priority
+          />
           <span className="text-[var(--color-accent)]">City of Crane</span>
         </Link>
 
         <nav className="hidden md:flex gap-6 text-sm">
           {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-[var(--color-muted)] hover:text-[var(--color-text)]"
-            >
+            <Link key={l.href} href={l.href} className="text-[var(--color-muted)] hover:text-[var(--color-text)]">
               {l.label}
             </Link>
           ))}

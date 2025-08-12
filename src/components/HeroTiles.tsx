@@ -1,12 +1,13 @@
-import Link from "next/link";
 import { Calendar, FileText, Megaphone, CreditCard } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export function HeroTiles() {
   const tiles = [
-    { href: "/news", label: "News & Notices", icon: Megaphone },
-    { href: "/calendar", label: "Calendar Events", icon: Calendar },
-    { href: "/documents", label: "Agendas & Minutes", icon: FileText },
-    { href: "/utilities", label: "Pay Utility Bill", icon: CreditCard },
+    { href: "/news", label: "News & Notices" },
+    { href: "/calendar", label: "Calendar Events" },
+    { href: "/documents", label: "Agendas & Minutes" },
+    { href: "/utilities", label: "Pay Utility Bill" },
   ];
 
   return (
@@ -14,7 +15,13 @@ export function HeroTiles() {
       {tiles.map((t) => (
         <Link key={t.href} href={t.href} className="link-tile">
           <span className="flex items-center gap-3">
-            <t.icon className="text-[var(--color-accent-2)]" size={18} />
+            <Image
+              src="/logo.png"
+              alt=""
+              width={20}
+              height={20}
+              className="object-contain"
+            />
             <span className="font-medium">{t.label}</span>
           </span>
           <span aria-hidden="true" className="text-[var(--color-muted)]">
