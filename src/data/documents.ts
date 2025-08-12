@@ -23,7 +23,7 @@ export const documents: Doc[] = [
     id: "ord-title-ii-health",
     category: "Ordinance",
     title: "Title II. Health, Safety and Welfare",
-    url: "https://example.com/ordinances/title-ii.pdf",
+    url: "https://www.crane-mo.com/doc/pdf/Title%20II.pdf",
     description:
       "Provisions relating to health, safety, and welfare.",
     tags: ["code", "health"],
@@ -32,7 +32,7 @@ export const documents: Doc[] = [
     id: "ord-title-iii-traffic",
     category: "Ordinance",
     title: "Title III. Traffic Code",
-    url: "https://example.com/ordinances/title-iii.pdf",
+    url: "https://www.crane-mo.com/doc/pdf/Title%20III.pdf",
     description:
       "Provisions that are traffic related.",
     tags: ["code", "traffic"],
@@ -41,24 +41,24 @@ export const documents: Doc[] = [
     id: "ord-title-iv-land-use",
     category: "Ordinance",
     title: "Title IV. Land Use",
-    url: "https://example.com/ordinances/title-iv.pdf",
+    url: "https://www.crane-mo.com/doc/pdf/Title%20IV.pdf",
     description:
       "Planning & Zoning, adjustments. (If ‘under construction’, keep but mark with tag.)",
     tags: ["code", "zoning"],
   },
 
   // ----- City Budgets (years) -----
-  { id: "budget-2019", category: "Budget", year: 2019, title: "2019 City Budget", url: "/docs/budget-2019.pdf", description: "Adopted budget for fiscal year 2019" },
-  { id: "budget-2018", category: "Budget", year: 2018, title: "2018 City Budget", url: "/docs/budget-2018.pdf", description: "Adopted budget for fiscal year 2018" },
-  { id: "budget-2017", category: "Budget", year: 2017, title: "2017 City Budget", url: "/docs/budget-2017.pdf", description: "Adopted budget for fiscal year 2017" },
-  { id: "budget-2016", category: "Budget", year: 2016, title: "2016 City Budget", url: "/docs/budget-2016.pdf", description: "Adopted budget for fiscal year 2016" },
-  { id: "budget-2015", category: "Budget", year: 2015, title: "2015 City Budget", url: "/docs/budget-2015.pdf", description: "Adopted budget for fiscal year 2015" },
+  { id: "budget-2019", category: "Budget", year: 2019, title: "2019 City Budget", url: "https://www.crane-mo.com/doc/pdf/BudgetFY19.pdf", description: "Adopted budget for fiscal year 2019" },
+  { id: "budget-2018", category: "Budget", year: 2018, title: "2018 City Budget", url: "https://www.crane-mo.com/doc/pdf/BudgetFY18.pdf", description: "Adopted budget for fiscal year 2018" },
+  { id: "budget-2017", category: "Budget", year: 2017, title: "2017 City Budget", url: "https://www.crane-mo.com/doc/pdf/BudgetFY17.pdf", description: "Adopted budget for fiscal year 2017" },
+  { id: "budget-2016", category: "Budget", year: 2016, title: "2016 City Budget", url: "https://www.crane-mo.com/doc/pdf/BudgetFY16.pdf", description: "Adopted budget for fiscal year 2016" },
+  { id: "budget-2015", category: "Budget", year: 2015, title: "2015 City Budget", url: "https://www.crane-mo.com/doc/pdf/BudgetFY15.pdf", description: "Adopted budget for fiscal year 2015" },
 
   // ----- City Audit Reports (years) -----
-  { id: "audit-2018", category: "Audit", year: 2018, title: "2018 City Audit Report", url: "/docs/audit-2018.pdf", description: "Results of the 2018 City audit" },
-  { id: "audit-2017", category: "Audit", year: 2017, title: "2017 City Audit Report", url: "/docs/audit-2017.pdf", description: "Results of the 2017 City audit" },
-  { id: "audit-2016", category: "Audit", year: 2016, title: "2016 City Audit Report", url: "/docs/audit-2016.pdf", description: "Results of the 2016 City audit" },
-  { id: "audit-2015", category: "Audit", year: 2015, title: "2015 City Audit Report", url: "/docs/audit-2015.pdf", description: "Results of the 2015 City audit" },
+  { id: "audit-2018", category: "Audit", year: 2018, title: "2018 City Audit Report", url: "https://www.crane-mo.com/doc/pdf/Crane%202018%20audit%20report.pdf", description: "Results of the 2018 City audit" },
+  { id: "audit-2017", category: "Audit", year: 2017, title: "2017 City Audit Report", url: "https://www.crane-mo.com/doc/pdf/Crane%202017%20audit%20report.pdf", description: "Results of the 2017 City audit" },
+  { id: "audit-2016", category: "Audit", year: 2016, title: "2016 City Audit Report", url: "https://www.crane-mo.com/doc/pdf/Crane%202016%20audit%20report.pdf", description: "Results of the 2016 City audit" },
+  { id: "audit-2015", category: "Audit", year: 2015, title: "2015 City Audit Report", url: "https://www.crane-mo.com/doc/pdf/Crane%202015%20audit%20report.pdf", description: "Results of the 2015 City audit" },
 ];
 
 // helpers
