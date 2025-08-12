@@ -2,6 +2,8 @@ import Link from "next/link";
 import { HeroTiles } from "@/components/HeroTiles";
 import HeroHeader from "@/components/HeroHeader";
 
+const variant: "gold" | "blue" | "red" = "gold";
+
 export default function Page() {
   return (
     <div className="space-y-6">
@@ -12,15 +14,23 @@ export default function Page() {
       />
 
       <section className="card p-6 md:p-10">
-        {/* keep the Notice + tiles + sections as-is */}
+      
+
         <div
           role="status"
-          className="rounded-lg border border-[var(--color-accent-warm)]/50 bg-[var(--color-accent-warm)]/10 text-[var(--color-accent-warm)] px-4 py-3"
+          className={`rounded-lg px-4 py-3 ${
+            variant === "gold"
+              ? "border-[var(--color-gold-600)] bg-[var(--color-gold-600)] text-white"
+              : variant === "blue"
+              ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-white"
+              : "border-[var(--color-danger)] bg-[var(--color-danger)] text-white"
+          }`}
         >
           <strong className="mr-2">Notice:</strong>
           Sidewalk improvements are underway. Certain sections will be closed for construction. 
           Use alternate routes and watch for workers.
         </div>
+
 
         <div className="mt-6">
           <HeroTiles />

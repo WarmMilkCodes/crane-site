@@ -1,22 +1,26 @@
 @import "tailwindcss";
 
-/* ===== Civic + Earthy Design Tokens ===== */
+/* ===== Civic + Earthy Design Tokens (with school colors) ===== */
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial;
   --font-serif: "Source Serif Pro", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
   /* Warm, grounded base */
-  --color-bg: #f3f1ed;           /* light warm gray-beige */
-  --color-surface: #ffffff;      /* cards / nav / footer */
-  --color-surface-alt: #faf8f5;  /* soft off-white section alt */
-  --color-outline: #ddd6ce;      /* beige-gray borders */
+  --color-bg: #f3f1ed;           /* warm light background */
+  --color-surface: #ffffff;      /* cards/nav/footer */
+  --color-surface-alt: #faf8f5;  /* alt section bg */
+  --color-outline: #ddd6ce;      /* soft border */
   --color-text: #1f2937;         /* slate-800 */
   --color-muted: #4b5563;        /* slate-600 */
 
-  /* Earthy civic accents */
-  --color-accent: #355e3b;       /* deep evergreen */
-  --color-accent-2: #4f7942;     /* softened green */
-  --color-accent-warm: #b68c5a;  /* warm tan */
+  /* School colors (primary + highlight) */
+  --color-accent: #204174;       /* primary blue */
+  --color-accent-2: #204174;     /* secondary blue (same) */
+  --color-accent-warm: #d3b83b;  /* gold */
+
+  /* Derived for hovers */
+  --color-blue-600: #1b3762;     /* darker blue hover */
+  --color-gold-600: #bda430;     /* darker gold hover */
 
   --color-success: #3b7d4f;
   --color-danger: #a33f3f;
@@ -46,13 +50,32 @@ body {
   @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium border border-[var(--color-outline)] bg-white hover:bg-gray-50 transition;
 }
 @utility btn-primary {
-  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-white bg-[var(--color-accent-2)] hover:bg-[var(--color-accent)] shadow-sm;
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-white shadow-sm;
+  background: var(--color-accent);
 }
+.btn-primary:hover { background: var(--color-blue-600); }
+
 @utility btn-secondary {
-  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-[var(--color-accent)] bg-[var(--color-surface-alt)] hover:bg-[var(--color-outline)]/20;
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium;
+  color: var(--color-accent);
+  background: var(--color-surface-alt);
 }
+.btn-secondary:hover { background: color-mix(in oklab, var(--color-surface-alt) 80%, black 5%); }
+
+/* Optional: Gold CTA (great for “Pay Utility Bill”) */
+@utility btn-gold {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold shadow-sm;
+  color: #1b1b1b;                 /* readable on gold */
+  background: var(--color-accent-warm);
+}
+.btn-gold:hover { background: var(--color-gold-600); }
+
 @utility link-tile {
-  @apply card p-5 md:p-6 hover:shadow-md hover:shadow-[var(--color-accent-warm)]/20 transition flex items-center justify-between;
+  @apply card p-5 md:p-6 transition flex items-center justify-between;
+  box-shadow: 0 0 0 0 transparent;
+}
+.link-tile:hover {
+  box-shadow: 0 6px 18px 0 color-mix(in oklab, var(--color-accent-warm) 22%, transparent);
 }
 
 /* ===== Accessibility Helpers ===== */
@@ -66,19 +89,11 @@ body {
 
 /* ===== Print styles (clean content-only) ===== */
 @media print {
-  /* hide chrome */
   header, nav, footer, .skip-link { display: none !important; }
-  /* page background white, dark text */
   body { background: #fff !important; color: #111 !important; }
-  /* cards lose borders/shadows; full width */
   .card, .section-alt { border: 0 !important; box-shadow: none !important; background: #fff !important; }
-  /* links show URLs (optional, comment out if you don't want) */
-  a[href]::after {
-    content: " (" attr(href) ")"; font-weight: normal; font-size: 0.9em; color: #555;
-  }
-  /* avoid breaking headings/tables across pages */
+  a[href]::after { content: " (" attr(href) ")"; font-weight: normal; font-size: 0.9em; color: #555; }
   h1, h2, h3 { break-after: avoid; }
   table, pre, blockquote { break-inside: avoid; }
-  /* tighter margins */
   @page { margin: 0.6in; }
 }
