@@ -51,6 +51,18 @@ export default async function DocumentsPage({
         Code of Ordinances, adopted budgets, and audit reports. PDFs open in a new tab.
       </p>
 
+       {/* Notice */}
+      <div
+        role="status"
+        className="mt-4 rounded-lg border border-[var(--color-gold-600)] bg-[var(--color-gold-600)] text-white px-4 py-3 text-sm leading-relaxed"
+      >
+        <strong className="block font-medium mb-1">Notice:</strong>
+        The only officially published version of the Crane Code of Ordinances is located in the City Clerk’s Office.
+        Please note, the online versions may differ from the official version and should be relied upon for
+        general information purposes only.
+      </div>
+
+
       {/* Filters */}
       <form className="mt-4 grid grid-cols-1 sm:grid-cols-4 gap-3">
         <input
