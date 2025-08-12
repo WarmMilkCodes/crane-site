@@ -43,18 +43,18 @@ export default function Page() {
               <li>
                 <Link
                   className="text-[var(--color-accent-2)] hover:underline"
-                  href="/news/boil-order-lifted"
+                  href="/news/city-pool-extended-hours"
                 >
-                  Boil Order Lifted
+                  City Pool Extended Hours
                 </Link>{" "}
                 • Jul 18
               </li>
               <li>
                 <Link
                   className="text-[var(--color-accent-2)] hover:underline"
-                  href="/news/city-pool-extended-hours"
+                  href="/news/public-hearing-7-14-25"
                 >
-                  City Pool Extended Hours
+                  Public Hearing Announcement
                 </Link>{" "}
                 • Jul 12
               </li>

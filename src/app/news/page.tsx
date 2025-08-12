@@ -22,8 +22,8 @@ export default function Page() {
           <div className="card p-5">
             <h2 className="text-lg font-semibold">News</h2>
             <ul className="mt-3 space-y-2 text-sm text-[var(--color-muted)]">
-              <li><Link className="text-[var(--color-accent-2)] hover:underline" href="/news/boil-order-lifted">Boil Order Lifted</Link> • Jul 18</li>
-              <li><Link className="text-[var(--color-accent-2)] hover:underline" href="/news/city-pool-extended-hours">City Pool Extended Hours</Link> • Jul 12</li>
+              <li><Link className="text-[var(--color-accent-2)] hover:underline" href="/news/city-pool-extended-hours">City Pool Extended Hours</Link> • Jul 14</li>
+              <li><Link className="text-[var(--color-accent-2)] hover:underline" href="/news/public-hearing-7-14-25">Public Hearing Announcement</Link> • Jul 13</li>
             </ul>
           </div>
           <div className="card p-5">
