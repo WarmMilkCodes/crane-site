@@ -99,8 +99,10 @@ export default function Page() {
             <div className="font-medium text-[var(--color-text)]">Utilities</div>
             <div>Start/Stop Service • Billing</div>
             <div className="mt-2">
-              <Link href="/utilities" className="btn-primary">
+              <Link href="https://secure.cpteller.com/terminal/portal/?op=5ROuHHTbXPsj" className="btn-primary">
+              
                 Pay Utility Bill
+              
               </Link>
             </div>
           </div>
