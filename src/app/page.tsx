@@ -18,7 +18,8 @@ export default function Page() {
           className="rounded-lg border border-[var(--color-accent-warm)]/50 bg-[var(--color-accent-warm)]/10 text-[var(--color-accent-warm)] px-4 py-3"
         >
           <strong className="mr-2">Notice:</strong>
-          Sidewalk project continues along Rose Ave.
+          Sidewalk improvements are underway. Certain sections will be closed for construction. 
+          Use alternate routes and watch for workers.
         </div>
 
         <div className="mt-6">

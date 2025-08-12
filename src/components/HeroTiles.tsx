@@ -7,7 +7,7 @@ export function HeroTiles() {
     { href: "/news", label: "News & Notices" },
     { href: "/calendar", label: "Calendar Events" },
     { href: "/documents", label: "Agendas & Minutes" },
-    { href: "/utilities", label: "Pay Utility Bill" },
+    { href: "https://secure.cpteller.com/terminal/portal/?op=5ROuHHTbXPsj", label: "Pay Utility Bill" },
   ];
 
   return (
